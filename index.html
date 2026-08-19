@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>למה לפתוח אזור תל אביב-יפו | מכורים אנונימיים</title>
+<style>
+  :root{
+    --navy:#132c52;
+    --navy-deep:#0c1e3a;
+    --blue:#2f6fb0;
+    --gold:#c19a3f;
+    --gold-light:#e4c974;
+    --paper:#f6f3ec;
+    --ink:#1c2333;
+    --ink-soft:#4a5468;
+    --card:#ffffff;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Segoe UI','Arial Hebrew','Noto Sans Hebrew',Arial,sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    direction:rtl;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  h1,h2,h3{
+    font-family:Georgia,'Times New Roman',serif;
+    color:var(--navy);
+  }
+  a{color:inherit;}
+  .container{
+    max-width:1080px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  /* NAV */
+  header.nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(12,30,58,0.92);
+    backdrop-filter:blur(6px);
+    color:#fff;
+    padding:14px 0;
+    transition:box-shadow .3s;
+  }
+  header.nav.scrolled{ box-shadow:0 6px 18px rgba(0,0,0,.25); }
+  .nav-inner{ display:flex; align-items:center; justify-content:space-between; }
+  .brand{ display:flex; align-items:center; gap:12px; font-weight:bold; font-size:16px; letter-spacing:.5px; }
+  .brand svg{ width:28px; height:28px; }
+  nav.links{ display:flex; gap:26px; font-size:15px; }
+  nav.links a{ text-decoration:none; opacity:.85; position:relative; padding-bottom:4px; }
+  nav.links a:hover{ opacity:1; }
+  nav.links a::after{
+    content:""; position:absolute; right:0; bottom:0; height:2px; width:0;
+    background:var(--gold); transition:width .25s;
+  }
+  nav.links a:hover::after{ width:100%; }
+
+  /* HERO */
+  .hero{
+    background:radial-gradient(ellipse at 30% 20%, #1c3a68 0%, var(--navy) 45%, var(--navy-deep) 100%);
+    color:#fff;
+    padding:110px 0 90px;
+    position:relative;
+    overflow:hidden;
+    text-align:center;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:radial-gradient(circle, rgba(228,201,116,.08) 1px, transparent 1px);
+    background-size:26px 26px;
+    opacity:.6;
+  }
+  .hero-content{ position:relative; z-index:2; }
+  .emblem-lg{
+    width:84px; height:84px; margin:0 auto 22px;
+    animation:fadeDown .9s ease both;
+  }
+  .eyebrow{
+    color:var(--gold-light); font-weight:bold; letter-spacing:3px; font-size:14px;
+    margin-bottom:18px; animation:fadeDown .9s .1s ease both;
+  }
+  .hero h1{
+    color:#fff; font-size:44px; line-height:1.3; max-width:760px; margin:0 auto 22px;
+    animation:fadeDown .9s .2s ease both;
+  }
+  .hero p.lead{
+    color:#c9d3e6; font-size:19px; max-width:620px; margin:0 auto 34px;
+    animation:fadeDown .9s .3s ease both;
+  }
+  .cta-row{ display:flex; gap:16px; justify-content:center; flex-wrap:wrap; animation:fadeDown .9s .4s ease both; }
+  .btn{
+    display:inline-block; padding:14px 30px; border-radius:30px; font-weight:bold; font-size:15px;
+    text-decoration:none; transition:transform .2s, box-shadow .2s;
+  }
+  .btn-gold{ background:var(--gold); color:var(--navy-deep); }
+  .btn-gold:hover{ transform:translateY(-2px); box-shadow:0 10px 24px rgba(193,154,63,.35); }
+  .btn-outline{ border:1.5px solid rgba(255,255,255,.5); color:#fff; }
+  .btn-outline:hover{ background:rgba(255,255,255,.08); transform:translateY(-2px); }
+
+  @keyframes fadeDown{ from{opacity:0; transform:translateY(-14px);} to{opacity:1; transform:translateY(0);} }
+
+  .divider-wave{ display:block; width:100%; height:60px; margin-top:-2px; }
+
+  /* SECTION GENERIC */
+  section{ padding:86px 0; }
+  .eyebrow-sm{
+    color:var(--blue); font-weight:bold; letter-spacing:2px; font-size:13px; margin-bottom:10px; text-align:center;
+  }
+  .section-title{ font-size:32px; text-align:center; margin-bottom:16px; }
+  .section-sub{
+    text-align:center; color:var(--ink-soft); max-width:640px; margin:0 auto 56px; font-size:17px;
+  }
+
+  /* PURPOSE */
+  .purpose-box{
+    background:var(--card); border-radius:16px; padding:38px 44px;
+    box-shadow:0 10px 30px rgba(19,44,82,.08); border-right:5px solid var(--gold);
+    max-width:820px; margin:0 auto;
+  }
+  .purpose-box p{ font-size:18px; color:var(--ink-soft); }
+  .purpose-box b{ color:var(--navy); }
+
+  /* REASONS GRID */
+  .reasons-grid{
+    display:grid; grid-template-columns:repeat(2, 1fr); gap:26px;
+  }
+  @media (max-width:760px){ .reasons-grid{ grid-template-columns:1fr; } }
+  .reason-card{
+    background:var(--card); border-radius:14px; padding:30px 28px;
+    box-shadow:0 6px 20px rgba(19,44,82,.06);
+    transition:transform .3s, box-shadow .3s;
+    opacity:0; transform:translateY(24px);
+  }
+  .reason-card.visible{ opacity:1; transform:translateY(0); }
+  .reason-card:hover{ transform:translateY(-6px); box-shadow:0 16px 34px rgba(19,44,82,.14); }
+  .reason-icon{
+    width:46px; height:46px; border-radius:50%;
+    background:linear-gradient(140deg, var(--gold-light), var(--gold));
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:16px; color:var(--navy-deep); font-size:20px; font-weight:bold;
+  }
+  .reason-card h3{ font-size:20px; margin-bottom:10px; }
+  .reason-card p{ color:var(--ink-soft); font-size:15.5px; }
+  .reason-card.wide{ grid-column:1 / -1; }
+
+  /* MEETING DETAILS */
+  .meeting-section{
+    background:linear-gradient(180deg, #eef2f8 0%, var(--paper) 100%);
+  }
+  .details-card{
+    max-width:720px; margin:0 auto; background:var(--card);
+    border:2px solid var(--navy); border-radius:16px; padding:36px 40px;
+    position:relative; box-shadow:0 14px 34px rgba(19,44,82,.1);
+  }
+  .details-card .tag{
+    position:absolute; top:-18px; right:32px; background:var(--gold); color:#fff;
+    font-weight:bold; font-size:14px; padding:6px 18px; border-radius:20px;
+  }
+  .details-list{ display:grid; grid-template-columns:1fr 1fr; gap:18px 30px; margin-top:14px; }
+  @media (max-width:560px){ .details-list{ grid-template-columns:1fr; } }
+  .detail-row{ font-size:18px; font-weight:bold; color:var(--navy); }
+  .detail-row .blank{ font-weight:normal; color:var(--ink-soft); border-bottom:1.5px dotted #a9b2c3; padding-bottom:2px; }
+
+  /* CLOSING CTA */
+  .closing-cta{
+    background:linear-gradient(160deg, var(--navy) 0%, var(--navy-deep) 100%);
+    color:#fff; text-align:center; padding:90px 0;
+  }
+  .closing-cta h2{ color:#fff; font-size:30px; margin-bottom:18px; }
+  .closing-cta p{ color:#c9d3e6; max-width:600px; margin:0 auto 30px; font-size:17px; }
+
+  footer{
+    background:var(--navy-deep); color:#93a2bd; text-align:center;
+    padding:26px 0; font-size:14px;
+  }
+  footer b{ color:#fff; }
+
+  .fade-in{ opacity:0; transform:translateY(16px); transition:opacity .7s, transform .7s; }
+  .fade-in.visible{ opacity:1; transform:translateY(0); }
+</style>
+</head>
+<body>
+
+<header class="nav" id="siteNav">
+  <div class="container nav-inner">
+    <div class="brand">
+      <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="none" stroke="#e4c974" stroke-width="5"/><polygon points="50,20 78,68 22,68" fill="none" stroke="#fff" stroke-width="5" stroke-linejoin="round"/><circle cx="50" cy="50" r="7" fill="#e4c974"/></svg>
+      <span>אזור תל אביב-יפו · מכורים אנונימיים</span>
+    </div>
+    <nav class="links">
+      <a href="#purpose">מטרת הפגישה</a>
+      <a href="#reasons">למה דווקא עכשיו</a>
+      <a href="#meeting">פרטי הפגישה</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-content">
+    <div class="emblem-lg">
+      <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="none" stroke="#e4c974" stroke-width="3"/><polygon points="50,20 78,68 22,68" fill="none" stroke="#ffffff" stroke-width="3" stroke-linejoin="round"/><circle cx="50" cy="50" r="6" fill="#e4c974"/></svg>
+    </div>
+    <div class="eyebrow">שירות אזורי · פגישה מכוננת</div>
+    <h1>למה לפתוח אזור שירות בתל אביב-יפו?</h1>
+    <p class="lead">
+      כ-50 קבוצות פועלות היום בתל אביב-יפו. הגיע הזמן לבדוק יחד אם אפשר לתת להן
+      מסגרת שירות משלהן — קרובה, נגישה, ומותאמת לצרכים המקומיים.
+    </p>
+    <div class="cta-row">
+      <a href="#reasons" class="btn btn-gold">לכל הסיבות</a>
+      <a href="#meeting" class="btn btn-outline">פרטי הפגישה</a>
+    </div>
+  </div>
+</section>
+
+<section id="purpose">
+  <div class="container">
+    <div class="eyebrow-sm fade-in">הרקע לפגישה</div>
+    <h2 class="section-title fade-in">חברים וחברות יקרים,</h2>
+    <p class="section-sub fade-in">
+      אתם מוזמנים לפגישה משמעותית: הקמת אזור שירות של מכורים אנונימיים באזור תל אביב-יפו.
+    </p>
+    <div class="purpose-box fade-in">
+      <p>
+        <b>מטרת הפגישה</b> היא לבדוק יחד את האפשרות להקים אזור שמאגד את כל הקבוצות
+        הפועלות בתל אביב-יפו תחת מסגרת שירות אחת — מסגרת שתאפשר תיאום טוב יותר,
+        קרבה לצרכים האמיתיים בשטח, ושיתוף פעולה הדוק בין הקבוצות בעיר.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="reasons" style="background:#fff;">
+  <div class="container">
+    <div class="eyebrow-sm fade-in">חמש סיבות</div>
+    <h2 class="section-title fade-in">למה לפתוח אזור תל אביב?</h2>
+    <p class="section-sub fade-in">
+      כל אחת מהסיבות הבאות עומדת בפני עצמה — ויחד הן מציירות תמונה ברורה של הצורך.
+    </p>
+    <div class="reasons-grid">
+      <div class="reason-card">
+        <div class="reason-icon">◆</div>
+        <h3>מענה לצורך משותף</h3>
+        <p>כ-50 קבוצות פועלות כיום בתל אביב-יפו. מספר כזה מצדיק מסגרת שירות ייעודית, שתוכל לתת מענה מרוכז וממוקד לצרכים של כולן.</p>
+      </div>
+      <div class="reason-card">
+        <div class="reason-icon">◆</div>
+        <h3>התמקדות בצרכים המקומיים</h3>
+        <p>תיאום מקלטים מול עיריית תל אביב, פעילויות וסדנאות המותאמות לאופי הקבוצות בעיר, ויצירת מסגרת נגישה ותומכת במיוחד לחברים חדשים.</p>
+      </div>
+      <div class="reason-card">
+        <div class="reason-icon">◆</div>
+        <h3>קבלת החלטות מתאימות</h3>
+        <p>אזור עצמאי מאפשר קבלת החלטות הקרובות למציאות בשטח — עבור המקלטים והקבוצות הפועלות בעיר, מתוך היכרות מעמיקה עם הצרכים שלהן.</p>
+      </div>
+      <div class="reason-card">
+        <div class="reason-icon">◆</div>
+        <h3>הפחתת עומס והגברת שיתוף פעולה</h3>
+        <p>הקמת אזור נפרד מפחיתה את העומס מהאזור המרכזי, ובמקביל מגבירה את שית

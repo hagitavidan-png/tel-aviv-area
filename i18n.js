@@ -281,7 +281,6 @@ function start(){
   const walker=document.createTreeWalker(document.documentElement,NodeFilter.SHOW_TEXT);let node;
   while(node=walker.nextNode()){
    if(node.parentElement?.closest('script,style,textarea,[data-no-translate],.reading-body'))continue;
-   if(!/[\u0590-\u05ff\u0400-\u04ff]/.test(node.nodeValue))continue;
    const converted=translate(node.nodeValue);if(converted!==normalize(node.nodeValue))node.nodeValue=node.nodeValue.replace(/\S[\s\S]*\S|\S/,()=>converted);
   }
   document.querySelectorAll('[aria-label],[placeholder],[alt],meta[content]').forEach(el=>{

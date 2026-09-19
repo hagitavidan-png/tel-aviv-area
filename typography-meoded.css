@@ -1,0 +1,6 @@
+@font-face{font-family:"Meoded Pashut";src:url("meoded-pashut-light.woff") format("woff");font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:"Meoded Pashut";src:url("meoded-pashut-bold.woff") format("woff");font-weight:700;font-style:normal;font-display:swap}
+html body,body .hub-hero h1,body h1,body h2,body h3,body h4,body h5,body h6,body button,body input,body select,body textarea,body summary,body .action,body .btn{font-family:"Meoded Pashut",Arial,sans-serif}
+body{font-weight:300}
+body h1,body h2,body h3,body h4,body h5,body h6,body strong,body b,body button,body summary,body .action,body .btn{font-weight:700}
+body input,body select,body textarea{font-weight:300}

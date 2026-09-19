@@ -1,0 +1,302 @@
+(()=>{
+const dict={
+  "פגישות בתל אביב–יפו | תל אביב–יפו · NA": "Meetings in Tel Aviv–Jaffa | NA",
+  "לעמוד הראשי": "Home",
+  "פגישות בתל אביב–יפו": "Meetings in Tel Aviv–Jaffa",
+  "מקור:": "Source:",
+  "רשימת הפגישות של NA ישראל": "NA Israel meeting list",
+  ". נבדק ב־19.09.2026. הרשימה כאן היא תמונת מצב מתאריך הבדיקה; לפני יציאה לפגישה בדקו במקור שינויים זמניים.": ". Checked on 19 September 2026. This list reflects the information available on that date; check the source for temporary changes before attending.",
+  "יום ראשון": "Sunday",
+  "יום שני": "Monday",
+  "יום שלישי": "Tuesday",
+  "יום רביעי": "Wednesday",
+  "יום חמישי": "Thursday",
+  "יום שישי": "Friday",
+  "שבת": "Saturday",
+  "מוקד": "Location",
+  "כל המוקדים": "All locations",
+  "גן דבורה": "Gan Dvora",
+  "ביצרון": "Bitzaron",
+  "רוטשילד": "Rothschild",
+  "יפו": "Jaffa",
+  "מקומות נוספים": "Other locations",
+  "חיפוש": "Search",
+  "ניקוי סינון": "Clear filters",
+  "לצפייה בכל הפגישות פתחו את רשימת NA ישראל בקישור למעלה.": "For all meetings, open the NA Israel list above.",
+  "דיווח על שינוי בפרטי פגישה באתר NA ישראל": "Report a change to a meeting on the NA Israel website",
+  "מכורים אנונימיים · תל אביב–יפו": "Narcotics Anonymous · Tel Aviv–Jaffa",
+  "קטעי קריאה לפגישות | תל אביב–יפו · NA": "Meeting Readings | Tel Aviv–Jaffa · NA",
+  "קטעי קריאה לפגישות": "Meeting Readings",
+  "מיהו המכור?": "Who Is an Addict?",
+  "הגדלת הקריאה": "Enlarge reading",
+  "מהי התוכנית מכורים אנונימיים?": "What Is the Narcotics Anonymous Program?",
+  "למה אנחנו כאן?": "Why Are We Here?",
+  "איך זה עובד?": "How It Works",
+  "שתים־עשרה המסורות של מכורים אנונימיים": "The Twelve Traditions of Narcotics Anonymous",
+  "אנו כן מחלימים": "We Do Recover",
+  "רק להיום": "Just for Today",
+  "מקור קטעי הקריאה: ספרות מכורים אנונימיים —": "Reading source: Narcotics Anonymous literature —",
+  "המשרד העולמי (NA World Services)": "NA World Services",
+  "ספרות ומבנה השירות | תל אביב–יפו · NA": "Literature & Service Structure | Tel Aviv–Jaffa · NA",
+  "ספרות ומבנה השירות": "Literature & Service Structure",
+  "מבנה השירות של מכורים אנונימיים": "The Narcotics Anonymous Service Structure",
+  "פתיחת התרשים בגודל מלא": "Open full-size diagram",
+  "מקור התרשים: מדריך השירות העולמי של NA.": "Diagram source: the NA service guide published by NA World Services.",
+  "ספרות וחומרי שירות": "Literature & Service Resources",
+  "ספרות להורדה בעברית — NA ישראל": "Hebrew literature — NA Israel",
+  "שתים־עשרה המסורות וקטעי הקריאה": "The Twelve Traditions and meeting readings",
+  "שירות באן-איי — NA ישראל": "Service in NA — NA Israel",
+  "ספרות ומדריכי שירות — NA World Services": "Literature and service guides — NA World Services",
+  "למה לפתוח אזור תל אביב-יפו | מכורים אנונימיים": "Why a Tel Aviv–Jaffa Area? | Narcotics Anonymous",
+  "אזור תל אביב-יפו · מכורים אנונימיים": "Tel Aviv–Jaffa Area · Narcotics Anonymous",
+  "מטרת היוזמה": "The aim of the initiative",
+  "למה דווקא עכשיו": "Why now?",
+  "שירות אזורי": "Area service",
+  "למה לפתוח אזור שירות בתל אביב-יפו?": "Why establish a service area in Tel Aviv–Jaffa?",
+  "52 קבוצות פועלות היום בתל אביב-יפו. הגיע הזמן לבדוק יחד אם אפשר לתת להן ועדת שירות אזור תל אביב — קרובה, נגישה, ומותאמת לצרכים המקומיים.": "52 groups are active in Tel Aviv–Jaffa today. It is time to explore together a Tel Aviv Area Service Committee that is close, accessible and responsive to local needs.",
+  "לכל הסיבות": "All the reasons",
+  "איך אזור מקומי יכול להועיל לקבוצות?": "How could a local area benefit the groups?",
+  "להצטרפות לקבוצת הוואטסאפ": "Join the WhatsApp group",
+  "הרקע ליוזמה": "About the initiative",
+  "חברים וחברות יקרים,": "Dear friends,",
+  "אנו בוחנים יחד את האפשרות להקים אזור שירות של מכורים אנונימיים בתל אביב-יפו.": "Together, we are exploring the possibility of establishing a Narcotics Anonymous service area in Tel Aviv–Jaffa.",
+  "היא לבדוק יחד את האפשרות להקים אזור שמאגד את כל הקבוצות הפועלות בתל אביב-יפו תחת ועדת שירות אזור תל אביב שתאפשר תיאום טוב יותר, קרבה לצרכים האמיתיים בשטח, ושיתוף פעולה הדוק בין הקבוצות בעיר.": "is to explore together an area bringing together the groups active in Tel Aviv–Jaffa through a Tel Aviv Area Service Committee, enabling better coordination, closer attention to needs on the ground and stronger cooperation between the city's groups.",
+  "הרוח שמנחה את התהליך": "The spirit guiding this process",
+  "נשענת על 12 המסורות ו־12 עקרונות השירות של NA: אחדות, אוטונומיה, מצפון קבוצתי, אחריות הקבוצות, תקשורת והשתתפות — מתוך מחויבות למטרה הראשית שלנו: לשאת את המסר למכור שעדיין סובל.": "is rooted in NA's Twelve Traditions and Twelve Concepts for Service: unity, autonomy, group conscience, group responsibility, communication and participation, with a commitment to our primary purpose: carrying the message to the addict who still suffers.",
+  "התפקוד הוא העיקר.": "Function comes first.",
+  "לפי מדריך השירות של מכורים אנונימיים, ועדות שירות אזוריות נועדו לסייע לקבוצות NA להיות יעילות יותר בנשיאת המסר למכור שעדיין סובל. הדגש הוא על התפקוד ולא על הצורה: בחינת ועדת שירות אזור תל אביב נעשית מתוך השאלה כיצד היא יכולה לסייע לקבוצות במילוי מטרתן.": "According to the NA service guide, area service committees help NA groups carry the message more effectively to the addict who still suffers. The emphasis is on function rather than form: the question is how a Tel Aviv Area Service Committee can help groups fulfill their purpose.",
+  "חמש סיבות": "Five reasons",
+  "למה לפתוח אזור תל אביב?": "Why establish a Tel Aviv area?",
+  "כל אחת מהסיבות הבאות עומדת בפני עצמה — ויחד הן מציירות תמונה ברורה של הצורך.": "Each of these reasons stands on its own; together, they show the need.",
+  "מענה לצורך משותף": "Meeting a shared need",
+  "52 קבוצות פועלות כיום בתל אביב-יפו. מספר כזה מצדיק ועדת שירות אזור תל אביב, שתוכל לתת מענה מרוכז וממוקד לצרכים של כולן.": "52 groups are currently active in Tel Aviv–Jaffa. This number supports the case for a Tel Aviv Area Service Committee that can respond to their shared needs in a coordinated and focused way.",
+  "התמקדות בצרכים המקומיים": "Focusing on local needs",
+  "תיאום מקלטים מול עיריית תל אביב, פעילויות וסדנאות המותאמות לאופי הקבוצות בעיר, ויצירת ועדת שירות אזור תל אביב נגישה ותומכת במיוחד לחברים חדשים.": "Coordinating meeting shelters with the Tel Aviv municipality, organizing activities and workshops suited to the city's groups, and developing an accessible Tel Aviv Area Service Committee that supports newcomers in particular.",
+  "קבלת החלטות מתאימות": "Decisions that fit local needs",
+  "אזור עצמאי מאפשר קבלת החלטות הקרובות למציאות בשטח — עבור המקלטים והקבוצות הפועלות בעיר, מתוך היכרות מעמיקה עם הצרכים שלהן.": "An autonomous area can make decisions that reflect conditions on the ground, based on a close understanding of the needs of the city's groups and meeting shelters.",
+  "חיזוק התקשורת ושיתוף הפעולה": "Strengthening communication and cooperation",
+  "ועדת שירות אזור תל אביב יכולה לחזק את הקשר בין קבוצות תל אביב-יפו, לאפשר שיתוף בניסיון ובידע, ולסייע בתיאום מאמצי השירות למען המטרה המשותפת: לשאת את המסר למכור שעדיין סובל.": "A Tel Aviv Area Service Committee can strengthen connections between Tel Aviv–Jaffa groups, support the sharing of experience and knowledge, and coordinate service efforts toward our shared purpose: carrying the message to the addict who still suffers.",
+  "ועדת שירות אזור תל אביב בגודל נכון": "A Tel Aviv Area Service Committee at the right scale",
+  "ועדת שירות אזור תל אביב מאפשרת מעורבות רחבה יותר של חברים — כולל כאלה שחדשים יחסית בתוכנית — ובכך מחזקת את הבסיס לשירות ולהמשכיות.": "A Tel Aviv Area Service Committee can encourage wider participation, including members relatively new to the program, strengthening the foundation for service and continuity.",
+  "מקומכם איתנו": "There is a place for you",
+  "בואו לקחת חלק בשירות.": "Come take part in service.",
+  "מכורים אנונימיים": "Narcotics Anonymous",
+  "· אזור תל אביב-יפו — עמוד מידע על היוזמה להקמת אזור שירות": "· Tel Aviv–Jaffa Area — information about the initiative to establish a service area",
+  "עדכונים ודוחות מוועדת שירות אזור תל אביב | תל אביב–יפו · NA": "Tel Aviv Area Service Committee Updates & Reports | NA",
+  "עדכונים ודוחות מוועדת שירות אזור תל אביב": "Tel Aviv Area Service Committee Updates & Reports",
+  "מקום לריכוז פרוטוקולים, דוחות גזבר ודוחות תתי־הוועדות.": "Minutes, treasurer's reports and subcommittee reports.",
+  "לקראת המשך הדרך": "Looking ahead",
+  "המדור מיועד לשימוש בעתיד, עם הקמת ועדת שירות אזור תל אביב. עדיין לא פורסמו בו דוחות או פרוטוקולים.": "This section is intended for future use, once the Tel Aviv Area Service Committee is established. No reports or minutes have been published yet.",
+  "פרוטוקולים": "Minutes",
+  "סיכומי ישיבות, החלטות ומשימות להמשך.": "Meeting summaries, decisions and follow-up tasks.",
+  "אין עדיין פרוטוקולים לפרסום.": "No minutes have been published yet.",
+  "דוחות גזבר": "Treasurer's reports",
+  "דיווח על הכנסות, הוצאות ויתרות.": "Income, expenses and balances.",
+  "אין עדיין דוחות גזבר לפרסום.": "No treasurer's reports have been published yet.",
+  "דוחות תתי־ועדות": "Subcommittee reports",
+  "עדכוני פעילות, צרכים ותוכניות עבודה.": "Activities, needs and work plans.",
+  "אין עדיין דוחות תתי־ועדות לפרסום.": "No subcommittee reports have been published yet.",
+  "המסמכים שיופיעו כאן יהיו מסמכים שאושרו לפרסום לציבור. מסמכים פנימיים אינם מוצגים באתר.": "Documents here will have been approved for public release. Internal documents are not displayed on this website.",
+  "מה יכול להועיל בהקמת אזור שירות תל אביב? | מכורים אנונימיים": "How could a Tel Aviv service area help? | Narcotics Anonymous",
+  "מה יכול להועיל בהקמת אזור שירות תל אביב?": "How could a Tel Aviv service area help?",
+  "היוזמה להקמת אזור שירות תל אביב נועדה לבחון כיצד ועדת שירות אזור תל אביב המשותפת לקבוצות בעיר יכולה לסייע להן במילוי מטרתנו הראשית: לשאת את המסר למכור שעדיין סובל.": "The initiative explores how a Tel Aviv Area Service Committee shared by the city's groups could help them fulfill our primary purpose: carrying the message to the addict who still suffers.",
+  "קבוצות בעלות צרכים ודפוסי פעילות דומים יכולות להפיק תועלת מקשר רציף, משיתוף בניסיון ומעשייה משותפת. התועלת של ועדת שירות אזור תל אביב תיבחן ביכולתה לסייע לקבוצות בפועל.": "Groups with similar needs and ways of working can benefit from regular contact, shared experience and joint action. The value of a Tel Aviv Area Service Committee will be measured by the practical support it provides to groups.",
+  "קרבה גאוגרפית — בסיס לקשר ולשירות משותף": "Geographic proximity: a basis for connection and shared service",
+  "בתל אביב–יפו פועלות עשרות קבוצות במוקדים סמוכים: כ־30 קבוצות במקלט גן דבורה, כ־10 במקלט ביצרון, כ־10 במקלט רוטשילד ובמקומות נוספים במרכז תל אביב, וכ־7 קבוצות ביפו.": "Dozens of groups meet at nearby locations in Tel Aviv–Jaffa: approximately 30 at the Gan Dvora shelter, 10 at the Bitzaron shelter, 10 at the Rothschild shelter and other central Tel Aviv locations, and 7 in Jaffa.",
+  "הקרבה בין הקבוצות, והשימוש של רבות מהן באותם מקומות מפגש, יוצרים הזדמנות לחזק את הקשר, לזהות צרכים משותפים ולפתח מענה מתואם. היכרות שוטפת יכולה לסייע בטיפול בצורכי המקלטים, בשיתוף ניסיון ומשאבים ובהרחבת ההשתתפות בשירות.": "The proximity of groups, many of which share meeting spaces, creates opportunities to strengthen connections, identify common needs and coordinate a response. Regular contact can help address the needs of meeting shelters, share experience and resources, and broaden participation in service.",
+  "ועדת שירות אזור תל אביב יכולה לחבר בין מוקדי הפעילות בעיר, תוך שמירה על האוטונומיה והאופי הייחודי של כל קבוצה. כך יוכלו הקבוצות ללמוד זו מזו, לתמוך זו בזו ולפעול יחד למען מטרתנו הראשית: לשאת את המסר למכור שעדיין סובל.": "A Tel Aviv Area Service Committee can connect the city's meeting locations while respecting each group's autonomy and individual character. Groups can learn from and support one another, working together to carry the message to the addict who still suffers.",
+  "שירות שמותאם לצורכי הקבוצות": "Service shaped by the groups' needs",
+  "קשר קרוב עם הקבוצות בעיר יכול לעזור לזהות צרכים משותפים ולקבוע יחד סדרי עדיפויות. כך אפשר לתכנן את השירות בהתאם למה שהקבוצות מעלות ולמה שנדרש בשטח.": "Close contact with the city's groups can help identify shared needs and agree on priorities. Service can then be planned around what the groups bring forward and what is needed on the ground.",
+  "חיזוק הקשר ושיתוף הניסיון": "Stronger connections and shared experience",
+  "ועדת שירות אזור תל אביב יכולה לאפשר לקבוצות להתייעץ, לשתף בדרכי התמודדות עם קשיים וללמוד זו מניסיונה של זו. קשר רציף יכול לסייע לקבוצה הזקוקה לתמיכה וליצור אחריות הדדית בין הקבוצות.": "A Tel Aviv Area Service Committee can enable groups to consult one another, share ways of responding to difficulties and learn from each other's experience. Regular contact can support groups in need and build mutual responsibility.",
+  "הרחבת ההשתתפות בשירות": "Wider participation in service",
+  "ועדת שירות אזור תל אביב קרובה ונגישה יכולה להקל על חברים וחברות לקחת חלק בשירות, להכיר את העשייה ולהביא אליה את ניסיונם. ליווי ושיתוף בידע יכולים לפתוח דרך גם למי שעושים את צעדיהם הראשונים בשירות.": "A nearby, accessible Tel Aviv Area Service Committee can make it easier for members to take part, learn about the work and contribute their experience. Guidance and shared knowledge can also open the way for members taking their first steps in service.",
+  "תיאום מאמצים ומשאבים": "Coordinating efforts and resources",
+  "עשייה משותפת מאפשרת לחלק משימות, לתאם פעילויות ולבחון יחד היכן נחוצים זמן, עשייה וכסף. תיאום כזה יכול לסייע לקבוצות לקדם משימות שקשה להן לבצע לבדן, בהתאם ליכולתן ולהחלטותיהן.": "Working together makes it possible to share tasks, coordinate activities and consider where time, effort and money are needed. This can help groups carry out tasks that are difficult to accomplish alone, in line with their capacity and decisions.",
+  "קשר ברור בין הקבוצות לבין השירות": "A clear connection between groups and service",
+  "ועדת שירות אזור תל אביב שהקבוצות משתתפות בעיצובה יכולה לחזק את הקשר בין הצרכים שהן מעלות, ההחלטות המתקבלות והעשייה בפועל. תקשורת שוטפת ודיווח ברור מאפשרים לקבוצות לדעת כיצד מתבצע השירות, להשפיע עליו ולבחון אם הוא ממלא את מטרתו.": "A Tel Aviv Area Service Committee shaped by participating groups can strengthen the connection between their needs, the decisions made and the work carried out. Regular communication and clear reporting allow groups to understand, influence and assess the service provided.",
+  "אחדות באמצעות עשייה משותפת": "Unity through working together",
+  "שיתוף פעולה סביב מטרה משותפת יכול לחזק תחושת השתייכות, אמון ונכונות לשאת באחריות. לצד הקשר המקומי, אפשר לטפח תקשורת ושיתוף פעולה עם מסגרות שירות נוספות, מתוך מחויבות לאחדות NA ולנשיאת המסר.": "Cooperation toward a shared purpose can strengthen belonging, trust and willingness to take responsibility. Alongside local connections, communication and cooperation with other service bodies can support NA unity and carrying the message.",
+  "הקבוצות שותפות לעיצוב הדרך": "Groups help shape the way forward",
+  "הקבוצות הן הבסיס למבנה השירות. היוזמה מבקשת להתפתח באמצעות המצפון הקבוצתי של הקבוצות המעוניינות בה: אילו צרכים הן מבקשות לקדם, כיצד הן רוצות להשתתף בועדת שירות אזור תל אביב ואילו משאבים הן מוכנות להקדיש לכך — מתוך אחריות להתחייבויותיהן ולהשפעתן על קבוצות אחרות.": "Groups are the foundation of the service structure. The initiative seeks to develop through the group conscience of interested groups: the needs they want to address, how they wish to participate in the Tel Aviv Area Service Committee, and the resources they are willing to contribute, with responsibility for their commitments and their impact on other groups.",
+  "התהליך נשען על רוח 12 המסורות ו־12 עקרונות השירות של NA: אחדות, אוטונומיה, מצפון קבוצתי, אחריות הקבוצות, תקשורת והשתתפות.": "The process draws on the spirit of NA's Twelve Traditions and Twelve Concepts for Service: unity, autonomy, group conscience, group responsibility, communication and participation.",
+  "השאלה שתנחה את הדרך היא: כיצד ועדת שירות אזור תל אביב מסייעת לקבוצות לשאת את המסר למכור שעדיין סובל?": "The guiding question is: how does a Tel Aviv Area Service Committee help groups carry the message to the addict who still suffers?",
+  "הודעות אן-איי | תל אביב–יפו · NA": "NA Notices | Tel Aviv–Jaffa · NA",
+  "הודעות אן-איי": "NA Notices",
+  "שליחת הודעה": "Send a notice",
+  "הכנת מודעה לפרסום": "Prepare a notice",
+  "פרסום באתר ייעשה לאחר אישור.": "Notices are published after approval.",
+  "שם הקבוצה": "Group name",
+  "כותרת המודעה": "Notice title",
+  "בתוקף עד": "Valid until",
+  "פרטי המודעה": "Notice details",
+  "הכנת נוסח והעתקה": "Prepare and copy text",
+  "פתיחת קבוצת הוואטסאפ": "Open the WhatsApp group",
+  "מכורים אנונימיים · תל אביב–יפו | פגישות, שירות ועדכונים": "Narcotics Anonymous · Tel Aviv–Jaffa | Meetings, Service & Updates",
+  "תל אביב–יפו": "Tel Aviv–Jaffa",
+  "מציאת פגישה באזור תל אביב–יפו": "Find a meeting in Tel Aviv–Jaffa",
+  "הצטרפות לוואטסאפ": "Join WhatsApp",
+  "צור קשר · בקרוב": "Contact · Coming soon",
+  "דף הבית": "Home",
+  "על היוזמה": "About the Initiative",
+  "פגישות": "Meetings",
+  "כלים לקבוצות": "Group Tools",
+  "עדכונים ודוחות": "Updates & Reports",
+  "תל אביב–יפו · מכורים אנונימיים": "Tel Aviv–Jaffa · Narcotics Anonymous",
+  "קישורים לאתרי השירות": "NA service links",
+  "קישורים לאתרי השירות של NA": "NA Service Websites",
+  "מכורים אנונימיים ישראל": "Narcotics Anonymous Israel",
+  "השירות העולמי — NA World Services": "NA World Services",
+  "פורום הנציגים האירופי — EDM": "European Delegates Meeting — EDM",
+  "ניווט ראשי": "Main navigation",
+  "דילוג לתוכן": "Skip to content",
+  "החלמה בסנטר — ביטול חד־פעמי": "Recovery at the Center — one-time cancellation",
+  "לפי הודעת NA ישראל, הפגישה ביום ראשון, 20.9.2026, לא תתקיים.": "According to NA Israel, the meeting on Sunday, 20 September 2026, is cancelled.",
+  "גן דבורה — שינוי שעה במוצאי יום כיפור": "Gan Dvora — time change after Yom Kippur",
+  "לפי הודעת NA ישראל, הפגישה ביום שני, 21.9.2026, תתחיל ב־21:30 במקום ב־20:00.": "According to NA Israel, the meeting on Monday, 21 September 2026, will start at 21:30 instead of 20:00.",
+  "למקור באתר NA ישראל": "Source: NA Israel",
+  "עודכן 19.09.2026": "Updated 19 September 2026",
+  "מודעות; ניתן לגלול ידנית": "Notices; scroll manually",
+  "עצירת גלילה": "Pause scrolling",
+  "כל המודעות": "All notices",
+  "הפעלת גלילה": "Resume scrolling",
+  "אין כרגע מודעות פעילות.": "There are no active notices at the moment.",
+  "התאמה למסך": "Fit to screen",
+  "חזרה לראש הדף": "Back to top",
+  "נוסח המודעה להעתקה": "Notice text to copy",
+  "הנוסח הועתק. אפשר להעבירו בקבוצת הוואטסאפ לבדיקת האחראים. המודעה עדיין לא נשלחה ולא פורסמה.": "Text copied. You can share it in the WhatsApp group for review. The notice has not been sent or published.",
+  "הנוסח מוכן להעתקה. המודעה עדיין לא נשלחה ולא פורסמה.": "The text is ready to copy. The notice has not been sent or published.",
+  "בחירת יום בשבוע": "Choose a day",
+  "שם קבוצה, רחוב או שפה": "Group name, street or language",
+  "מפה וניווט": "Map & directions",
+  "לא נמצאו פגישות שמתאימות לסינון. אפשר לנקות את הסינון ולנסות שוב.": "No meetings match these filters. Clear the filters and try again.",
+  "עברית": "Hebrew",
+  "Русский": "Russian",
+  "ללא עישון": "No smoking",
+  "לא": "No smoking",
+  "יום שבת": "Saturday",
+  "מצפון יום א'": "Sunday Conscience",
+  "זוהי הדרך": "This Is the Way",
+  "רוח אלוהים אוהב": "Spirit of a Loving God",
+  "רוח אלוהים אוהב-רוטשילד": "Spirit of a Loving God — Rothschild",
+  "החלמה בסנטר": "Recovery at the Center",
+  "פגישה ברוסית": "Russian-language Meeting",
+  "לחיות נקי": "Living Clean",
+  "הדרך לחופש": "The Road to Freedom",
+  "אמון בתהליך": "Trust the Process",
+  "סבב הרגשה": "Feelings Round",
+  "מצפון יום ב'": "Monday Conscience",
+  "קבוצת הדרך": "The Way Group",
+  "אחווה ויצירתיות בהחלמה": "Fellowship and Creativity in Recovery",
+  "צועדים בהחלמה": "Stepping in Recovery",
+  "פעמיים כי טוב": "Twice as Good",
+  "גאים בהחלמה": "Proud in Recovery",
+  "רק ביחד": "Only Together",
+  "הדרך אל החופש": "The Road to Freedom",
+  "מצפון רביעי בבוקר": "Wednesday Morning Conscience",
+  "צעירים וחופשיים": "Young and Free",
+  "פגישת NA": "NA Meeting",
+  "עשו זאת בקלות": "Easy Does It",
+  "צעדת בוקר": "Morning Step",
+  "מסמרים - תבוא או תבריז!": "Nails — Show Up or Bail!",
+  "התחלה חדשה (גן דבורה)": "A New Beginning (Gan Dvora)",
+  "זה עובד איך ולמה": "It Works: How and Why",
+  "רוחניות בהחלמה": "Spirituality in Recovery",
+  "ספרות מצילת חיים": "Life-Saving Literature",
+  "יישום והבנה (גן דבורה)": "Practice and Understanding (Gan Dvora)",
+  "אחיות לדרך (קבוצת נשים)": "Sisters on the Path (Women's Group)",
+  "החלמת שבת": "Saturday Recovery",
+  "קבוצה ברוסית": "Russian-language Group",
+  "״החלמה בשישי״": "Friday Recovery",
+  "מדריך הצעדים": "Step Working Guide",
+  "אומץ לשנות": "Courage to Change",
+  "מזון לנשמה": "Food for the Soul",
+  "מוצ״ש גן דבורה": "Saturday Evening — Gan Dvora",
+  "גאים ומחלימים": "Proud and Recovering",
+  "סמטת גור אריה, גן דבורה בארון - מקלט בגינה": "Gur Aryeh Alley, Dvora Baron Garden — shelter in the garden",
+  "בת עין 6 - מקלט": "6 Bat Ayin St — shelter",
+  "מקלט בשדרה - מול שדרות ההשכלה 40, ביצרון": "Boulevard shelter — opposite 40 HaHaskala Blvd, Bitzaron",
+  "יהושוע התלמי 16, תל אביבבמקלט שבתוך היחידה להתמכרויות": "16 Yehoshua HaTalmi St, Tel Aviv — shelter inside the addiction services unit",
+  "הסלון החברתי בדיזנגוף סנטר. בניין B קומה 3. מעל קפה גרג": "Social Salon at Dizengoff Center, Building B, 3rd floor, above Cafe Greg",
+  "התקווה 70, שכונת התקווה": "70 HaTikva St, HaTikva neighborhood",
+  "אלנבי 43 תל אביב, המרחב החברתי-בית לקהילות, קומה 2. קוד בדלת: 7890#הפגישה מתקיימת כרגיל. ירידה למקלט דרך מדרגות חירום": "43 Allenby St, Tel Aviv, Social Space — House for Communities, 2nd floor. Door code: 7890#. Meeting as usual; access the shelter via the emergency stairs.",
+  "Wednesday MiraclesDrahi Comunity Center, Kalisher Street 5, 1st Floor, White RoomJFT + SharingAddicts Only": "Wednesday Miracles — Drahi Community Center, 5 Kalisher St, 1st floor, White Room. Just for Today + sharing. Addicts only.",
+  "שכונת התקווה 70 תל אביב המקלט צמוד לגן הילדים": "70 HaTikva St, Tel Aviv — shelter next to the kindergarten",
+  "יהושע התלמי 16, במקלט": "16 Yehoshua HaTalmi St — shelter",
+  "Тема: только на сегодняАдрес: Приют в Сдере - напротив Сдерот Хаскала 40, Битцрон": "Topic: Just for Today. Boulevard shelter — opposite 40 HaHaskala Blvd, Bitzaron",
+  "יהושוע התלמי 16, תל אביב במקלט שבתוך היחידה להתמכרויות": "16 Yehoshua HaTalmi St, Tel Aviv — shelter inside the addiction services unit",
+  "בת עין 6 יפו": "6 Bat Ayin St, Jaffa",
+  "יהושוע התלמי 16, תל אביבבמקלט בתוך היחידה להתמכרויות": "16 Yehoshua HaTalmi St, Tel Aviv — shelter inside the addiction services unit",
+  "סמטת גור אריה, גן דבורה בארון (מקלט בגינה)": "Gur Aryeh Alley, Dvora Baron Garden (shelter in the garden)",
+  "הצטרפות לקבוצת הוואטסאפ": "Join the WhatsApp group",
+  "הצטרפות לקבוצת הוואטסאפ באמצעות קוד QR": "Join the WhatsApp group using a QR code",
+  "קוד QR להצטרפות לקבוצת אזור תל אביב בדרך": "QR code to join the Tel Aviv area WhatsApp group",
+  "איתור פגישה לפי יום, מוקד או שם קבוצה, עם פרטי הגעה וקישור לניווט.": "Find a meeting by day, location or group name, with addresses and directions.",
+  "שבעת קטעי הקריאה מתוך מצגת הקבוצה, לצפייה באתר.": "Seven NA meeting readings.",
+  "היכרות עם גופי השירות וקישורים לספרות ולחומרי השירות של NA.": "NA service structure, literature and service resources.",
+  "הכירו את היוזמה להקמת אזור שירות בתל אביב–יפו: הרקע, חמש הסיבות להקמת האזור ועקרונות השירות של NA למען נשיאת המסר למכור שעדיין סובל. באתר גם קישור להצטרפות לקבוצת הוואטסאפ.": "Explore the Tel Aviv–Jaffa service area initiative: its background, aims and NA service principles. Join the WhatsApp group.",
+  "יוזמת אזור שירות תל אביב–יפו": "Tel Aviv–Jaffa Service Area Initiative",
+  "לקראת אזור שירות תל אביב–יפו | רקע, מטרות ועקרונות": "Toward a Tel Aviv–Jaffa Service Area | Background, Aims & Principles",
+  "אזור תל אביב — סמל NA על רקע העיר בשעת ערב": "Tel Aviv area — NA symbol over the city at dusk",
+  "הקרבה בין הקבוצות בתל אביב–יפו, שיתוף הניסיון, הרחבת ההשתתפות ועקרונות השירות — כיצד אזור מקומי יכול לסייע בנשיאת המסר.": "How local connections, shared experience and participation in service can help Tel Aviv–Jaffa groups carry the message.",
+  "שינויי פגישות, עדכונים ובקשות לשירות בתל אביב–יפו.": "Meeting changes, updates and service opportunities in Tel Aviv–Jaffa.",
+  "מידע לקבוצות ולחברים בתל אביב–יפו: רשימת פגישות, הודעות אן-איי, קריאות, ספרות ומבנה השירות, היוזמה להקמת אזור וקישור לקבוצת הוואטסאפ.": "Resources for groups and members in Tel Aviv–Jaffa: meetings, NA notices, readings, literature, service structure and the area initiative.",
+  "מכורים אנונימיים · תל אביב–יפו | פגישות ושירות": "Narcotics Anonymous · Tel Aviv–Jaffa | Meetings & Service"
+};
+const normalize=s=>s.replace(/\s+/g,' ').trim();
+const requested=new URLSearchParams(location.search).get('lang');
+let saved;try{saved=localStorage.getItem('na-language')}catch{}
+const lang=['he','en'].includes(requested)?requested:(saved==='en'?'en':'he');
+try{localStorage.setItem('na-language',lang)}catch{}
+const en=lang==='en';document.documentElement.lang=lang;document.documentElement.dir=en?'ltr':'rtl';
+const weekdays={'ראשון':'Sunday','שני':'Monday','שלישי':'Tuesday','רביעי':'Wednesday','חמישי':'Thursday','שישי':'Friday','שבת':'Saturday'};
+function translate(value){
+ const s=normalize(String(value));if(dict[s])return dict[s];
+ const count=s.match(/^(\d+) פגישות · (?:יום )?(.+)$/);if(count)return `${count[1]} ${count[1]==='1'?'meeting':'meetings'} · ${weekdays[count[2]]||count[2]}`;
+ if(s.startsWith('ניווט אל '))return 'Directions to '+translate(s.slice(9));
+ const alt=s.match(/^(.+) — עמוד (\d+)\. קטע הקריאה מתוך מצגת הקבוצה\.$/);if(alt)return translate(alt[1])+' — page '+alt[2];
+ if(s.startsWith('מבנה השירות:'))return 'The Narcotics Anonymous service structure';
+ if(s.includes(' · '))return s.split(' · ').map(translate).join(' · ');
+ if(s.endsWith(' ·'))return translate(s.slice(0,-2))+' ·';
+ return s;
+}
+window.NA_I18N={lang,en,translate};
+function start(){
+ // Explicit values preserve filter keys when option labels are translated.
+ document.querySelectorAll('option').forEach(o=>{if(!o.hasAttribute('value'))o.value=o.textContent});
+ const switcher=document.createElement('div');switcher.className='language-switch';switcher.setAttribute('role','group');switcher.setAttribute('aria-label',en?'Language':'שפה');switcher.setAttribute('data-no-translate','');
+ for(const [code,label] of [['he','עברית'],['en','English']]){const a=document.createElement('a');const u=new URL(location.href);u.searchParams.set('lang',code);a.href=u.pathname+u.search+u.hash;a.textContent=label;a.lang=code;a.hreflang=code;a.setAttribute('aria-current',code===lang?'true':'false');switcher.append(a)}
+ document.querySelector('.nav-inner')?.prepend(switcher);
+ if(!en)return;
+ const readingFiles=['who-is-an-addict','what-is-the-na-program','why-are-we-here','how-it-works','twelve-traditions','we-do-recover','just-for-today'];
+ document.querySelectorAll('details.reading').forEach((detail,i)=>{
+  const original=detail.querySelector('.reading-body');original.hidden=true;
+  const body=document.createElement('div');body.className='english-reading';
+  const link=document.createElement('a');link.className='action';link.href='https://nzna.org/readings/'+readingFiles[i];link.target='_blank';link.rel='noopener noreferrer';link.textContent='Open official English reading (PDF)';body.append(link);detail.append(body);
+ });
+ const diagram=document.querySelector('img.diagram');if(diagram){diagram.src='https://na.org/wp-content/uploads/2024/08/SS-PNG.webp';diagram.removeAttribute('width');diagram.removeAttribute('height');diagram.alt='Narcotics Anonymous service structure';const a=document.querySelector('a[href="service-structure.png"]');if(a)a.href=diagram.src}
+ let observer;
+ const translatePage=()=>{
+  observer?.disconnect();
+  const walker=document.createTreeWalker(document.documentElement,NodeFilter.SHOW_TEXT);let node;
+  while(node=walker.nextNode()){
+   if(node.parentElement?.closest('script,style,textarea,[data-no-translate],.reading-body'))continue;
+   if(!/[\u0590-\u05ff\u0400-\u04ff]/.test(node.nodeValue))continue;
+   const converted=translate(node.nodeValue);if(converted!==normalize(node.nodeValue))node.nodeValue=node.nodeValue.replace(/\S[\s\S]*\S|\S/,()=>converted);
+  }
+  document.querySelectorAll('[aria-label],[placeholder],[alt],meta[content]').forEach(el=>{
+   if(el.closest('[data-no-translate]'))return;
+   for(const attr of ['aria-label','placeholder','alt','content'])if(el.hasAttribute(attr)){const v=el.getAttribute(attr);const next=translate(v);if(next!==normalize(v))el.setAttribute(attr,next)}
+  });
+  document.querySelector('meta[property="og:locale"]')?.setAttribute('content','en_US');
+  document.querySelectorAll('a[href]').forEach(a=>{
+   if(a.closest('[data-no-translate]'))return;
+   const u=new URL(a.getAttribute('href'),location.href);
+   if(u.origin===location.origin&&(u.pathname.endsWith('.html')||u.pathname.endsWith('/'))){u.searchParams.set('lang','en');const next=u.pathname+u.search+u.hash;if(a.getAttribute('href')!==next)a.setAttribute('href',next)}
+  });
+  observer?.observe(document.body,{childList:true,subtree:true,characterData:true,attributes:true,attributeFilter:['aria-label','placeholder']});
+ };
+ observer=new MutationObserver(translatePage);translatePage();
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
+})();

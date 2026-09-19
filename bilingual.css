@@ -1,0 +1,16 @@
+.language-switch{display:flex;gap:4px;align-items:center;justify-content:flex-end;width:100%;direction:ltr;margin-bottom:8px}
+.language-switch a{color:#fff;text-decoration:none;border:1px solid #8190a6;border-radius:18px;padding:5px 14px;font:16px/1.5 Arial,sans-serif;min-height:36px}
+.language-switch a[aria-current="true"]{background:#c19a3f;border-color:#c19a3f;color:#0c1e3a}
+.language-switch a:focus-visible{outline:3px solid white;outline-offset:3px}
+html[lang="en"] body{direction:ltr}
+html[lang="en"] body,html[lang="en"] body h1,html[lang="en"] body h2,html[lang="en"] body h3,html[lang="en"] body p,html[lang="en"] body a,html[lang="en"] body input,html[lang="en"] body button,html[lang="en"] body select,html[lang="en"] body textarea,html[lang="en"] body summary{font-family:Arial,sans-serif}
+html[lang="en"] body .hub-main,html[lang="en"] body .service-item,html[lang="en"] body .reason-card,html[lang="en"] body .notice-card,html[lang="en"] body .meeting-card,html[lang="en"] body .article,html[lang="en"] body #bulletin{text-align:left}
+html[lang="en"] body .eyebrow,html[lang="en"] body .eyebrow-sm{letter-spacing:.08em}
+html[lang="en"] body h1{font-size:clamp(32px,5vw,58px);line-height:1.2}
+html[lang="en"] body .site-links a{font-size:16px}
+html[lang="en"] body p{font-size:18px;line-height:1.65}
+html[lang="en"] .reading-body{display:none!important}
+.english-reading{padding:24px}
+[hidden]{display:none!important}
+html[lang="en"] body .action,html[lang="en"] body .btn{white-space:normal;text-align:center;max-width:100%}
+@media(max-width:600px){.language-switch{justify-content:center}html[lang="en"] body .brand{font-size:18px}html[lang="en"] body h2{overflow-wrap:break-word}html[lang="en"] body .home-join-row{flex-wrap:wrap;justify-content:center}}

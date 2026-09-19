@@ -1,0 +1,23 @@
+@font-face{font-family:"Meoded Pashut";src:url("meoded-pashut-light.woff") format("woff");font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:"Meoded Pashut";src:url("meoded-pashut-bold.woff") format("woff");font-weight:700;font-style:normal;font-display:swap}
+html body,body .hub-hero h1,body h1,body h2,body h3,body h4,body h5,body h6,body button,body input,body select,body textarea,body summary,body .action,body .btn{font-family:"Meoded Pashut",Arial,sans-serif}
+body{font-weight:300}
+body h1,body h2,body h3,body h4,body h5,body h6,body strong,body b,body button,body summary,body .action,body .btn{font-weight:700}
+body input,body select,body textarea{font-weight:300}
+
+/* Meoded Pashut has a compact letter height: keep supporting text readable. */
+html body{font-size:20px;line-height:1.65}
+body .site-links a,body.home .site-links a{font-size:18px;line-height:1.4;padding:8px 0}
+body .brand,body.home .brand{font-size:20px;line-height:1.4}
+body p,body .reason-card p,body .section-sub,body .closing-cta p,body .whatsapp-join p{font-size:20px}
+body .source,body small,body time,body footer,body .eyebrow-sm{font-size:17px}
+body input,body select,body textarea,body button,body .action,body .btn{font-size:20px}
+body .toolbar label{font-size:20px}
+body.home .home-actions>.action,body.home .home-join-row .whatsapp-button{font-size:20px;line-height:1.4}
+body #bulletin h3{font-size:22px;line-height:1.45}
+body #bulletin p{font-size:20px;line-height:1.6}
+body #bulletin time{font-size:17px;color:#505967}
+body #bulletin .action{font-size:18px;min-height:44px}
+body #back-to-top{font-size:24px;min-width:44px;min-height:44px}
+body .home-eyebrow,body .eyebrow{font-size:18px}
+@media(max-width:600px){body .site-links,body.home .site-links{column-gap:16px;row-gap:4px}body .site-links a,body.home .site-links a{font-size:18px}}
